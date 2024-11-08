@@ -1,13 +1,15 @@
-const { redisClient } = require('./redis.config')
+// const { redisClient } = require('./redis.config')
 const express = require('express')
 const app = express()
 const http = require('http')
 const server = http.createServer(app)
 const cors = require('cors')
 const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+dotenv.config();
 const verifyToken = require('./middleware/validateToken')
 const dashboardRoutes = require('./routes/dashboard')
+const connectToMongoDB = require('./config/db')
 const { Server } = require('socket.io')
 const io = new Server(server, {
   cors: {
@@ -16,11 +18,19 @@ const io = new Server(server, {
   }
 })
 
+//.
+const redis = require('redis');
+const redisClient = redis.createClient();
+
+redisClient.connect() // necessary if you're using redis v4+
+
 redisClient.on('connect', () => {
-  ;(async () => {
+  (async () => {
     console.log('Connected to our redis instance!')
   })()
 })
+// module.exports = { redisClient };
+
 const { socketHandler } = require('./sockets/socket')
 
 dotenv.config()
@@ -30,16 +40,8 @@ app.use(express.json())
 
 socketHandler(io)
 
-// connect to db
-mongoose
-  .connect(process.env.DB_CONNECT, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => {
-    console.log('Mongo Connection Successful!')
-  })
-  .catch((err) => console.error(err))
+connectToMongoDB();
+
 
 //import routes
 const authRoutes = require('./routes/auth')

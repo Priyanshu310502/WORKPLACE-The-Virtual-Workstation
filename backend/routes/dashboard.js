@@ -12,7 +12,6 @@ const { leaveRoomValidation } = require('../controllers/dash.leaveRoom.controlle
 router.post('/create', (req, res) => {
   createRoomValidation(req, res)
 })
-module.exports = router
 
 router.patch('/join', (req, res) => {
   joinRoomValidation(req, res)
@@ -49,3 +48,5 @@ router.patch('/addSong', (req, res) => {
 router.patch('/removeTopSong', (req, res) => {
   removeTopSongValidation(req, res)
 })
+
+module.exports = router

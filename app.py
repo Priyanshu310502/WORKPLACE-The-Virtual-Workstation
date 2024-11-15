@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # MongoDB connection setup
-client = MongoClient("mongodb+srv://geeky573:Geeky%40123@cluster0.ykbda.mongodb.net/WorkPlace?retryWrites=true&w=majority")
+client = MongoClient("your mongoDB url")
 db = client['face_recognition_db']
 fs = gridfs.GridFS(db)
 

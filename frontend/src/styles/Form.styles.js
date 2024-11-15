@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const FormSection = styled.div`
-  background-image: url(../../resources/images/circle-bg.svg);
+  background-image: url(../../resources/images/bgPage.webp);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -30,7 +30,7 @@ export const FormTitle = styled.h1`
 
 export const FormColumn = styled.div`
   padding: 50px 30px;
-  background: rgb(80 80 80 / 15%);
+  background: rgba(255, 255, 240, 0.15);
   box-shadow: rgb(37 205 152 / 26%) 0px 8px 32px 0px;
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
@@ -134,11 +134,12 @@ export const FormButton = styled.button`
 export const FormSubText = styled.p`
   color: white;
   margin-top: 50px;
-  font-size: 18px;
+  font-size: 25px;
+  font-weight: bolder;
   text-align: center;
 
   & a{
-    color: #17d217;
+    color: rgb(100 100 0 / 85%);
   }
 
   @media (max-width: 539px){

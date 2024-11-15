@@ -487,7 +487,7 @@ const LoginForm = ({ setToken, setUser }) => {
       setUser({ username: resData.data.username })
 
       // Navigate to the Face Verification page
-      navigate('/face-verification')
+      navigate('/dashboard')
     } catch (error) {
       setError(error.message)
     }

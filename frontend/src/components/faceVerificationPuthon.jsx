@@ -222,7 +222,7 @@ const FaceVerification = () => {
     <div className="face-verification-container">
       <h1 className="heading">Face Verification</h1>
       {modelLoading && <p>Loading model...</p>} {/* Show loading message for model */}
-      
+
       <div className="webcam-container">
         <Webcam
           audio={false}

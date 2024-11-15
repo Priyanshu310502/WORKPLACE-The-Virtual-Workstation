@@ -5,10 +5,10 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <nav className={styles.home_navbar}>
-        <Link to="/login" className={styles.btn}>
+        <Link to="/login" className={styles.hero_cta_pwn1}>
           Login
         </Link>
-        <Link to="/register" className={styles.btn}>
+        <Link to="/register" className={styles.hero_cta_pwn2}>
           Register
         </Link>
         {/* <Link to="/face-dection" className={styles.btn}>
@@ -35,9 +35,9 @@ const Home = () => {
           {/* <span className={styles.hero_heading_span}></span> */}
           PLACE
         </div>
-        <div className={styles.hero_subtext}>Let the party begin!</div>
+        {/* <div className={styles.hero_subtext}>Let the party begin!</div> */}
         <Link to="/login" className={styles.hero_cta}>
-          LET'S GO
+          LET'S Join
         </Link>
       </div>
     </div>

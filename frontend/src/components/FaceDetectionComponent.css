@@ -1,0 +1,117 @@
+/* General container styles */
+.face-detection-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .face-detection-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .face-detection-header h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .face-detection-header p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Webcam styling */
+  .webcam-view {
+    border-radius: 8px;
+    border: 3px solid #ddd;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .camera-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .action-buttons {
+    margin-top: 15px;
+  }
+  
+  .capture-btn,
+  .close-camera-btn,
+  .open-camera-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .capture-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .capture-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .close-camera-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .close-camera-btn:hover {
+    background-color: #e53935;
+  }
+  
+  .open-camera-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .open-camera-btn:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Open camera container */
+  .open-camera-container {
+    text-align: center;
+  }
+  
+  .open-camera-btn {
+    width: 150px;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 600px) {
+    .face-detection-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .capture-btn,
+    .close-camera-btn,
+    .open-camera-btn {
+      width: 100%;
+      font-size: 18px;
+      padding: 12px;
+    }
+  
+    .webcam-view {
+      max-height: 500px;
+    }
+  }
+  

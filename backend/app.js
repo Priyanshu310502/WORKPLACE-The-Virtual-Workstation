@@ -7,6 +7,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv');
 dotenv.config();
+const port = process.env.PORT || 1337
 const verifyToken = require('./middleware/validateToken')
 const dashboardRoutes = require('./routes/dashboard')
 const connectToMongoDB = require('./config/db')
@@ -41,18 +42,23 @@ app.use(express.json())
 socketHandler(io)
 
 connectToMongoDB();
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ limit: '10mb' }));
 
 //import routes
 const authRoutes = require('./routes/auth')
+const faceRoutes = require('./routes/faceRoute')
 
 // route middlewares
 app.use('/api/user', authRoutes)
+app.use('/api/auth', faceRoutes)
 
 // this route is protected with token
 app.use('/api/dashboard', verifyToken, dashboardRoutes)
 
-server.listen(1337, () => {
+server.listen(port, () => {
   console.log('listening on port 1337')
 })
 

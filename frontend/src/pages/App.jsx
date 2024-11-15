@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Home from './Home/Home'
 import RegisterForm from '../components/registerForm'
 import LoginForm from '../components/loginForm'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyle from '../styles/globalStyles'
 import Dashboard from './Dashboard'
@@ -10,6 +11,10 @@ import Room from './Room'
 import { SocketContext, socket } from '../contexts/socket'
 import { QueueIdProvider } from '../contexts/queue'
 import { PlaylistProvider } from '../contexts/playlist'
+// import RegisterOrLogin from '../components/registerOrlogin'
+import RegisterOrLogin from '../components/CapturePython'
+import FaceVerification from '../components/faceVerificationPuthon'
+import VideoConferencePage from '../components/videoConferencing'
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'))
@@ -21,12 +26,15 @@ function App() {
     <>
       <GlobalStyle />
       <PlaylistProvider>
-      <SocketContext.Provider value={socket}>
-        <QueueIdProvider>
+        <SocketContext.Provider value={socket}>
+          <QueueIdProvider>
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="register" element={<RegisterForm />} />
+                <Route path="face-capture" element={<RegisterOrLogin />} />
+                <Route path="face-verification" element={<FaceVerification />} />
+                <Route path="video-conference" element={<VideoConferencePage />} />
                 <Route path="login" element={<LoginForm setToken={setToken} setUser={setUser} />} />
                 <Route
                   path="dashboard"
@@ -46,8 +54,8 @@ function App() {
                 />
               </Routes>
             </BrowserRouter>
-        </QueueIdProvider>
-      </SocketContext.Provider>
+          </QueueIdProvider>
+        </SocketContext.Provider>
       </PlaylistProvider>
     </>
   )

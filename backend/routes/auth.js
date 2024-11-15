@@ -9,4 +9,5 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res) => {
   loginValidation(req, res)
 })
+
 module.exports = router

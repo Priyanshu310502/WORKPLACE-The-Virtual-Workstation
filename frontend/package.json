@@ -9,10 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "axios": "^1.7.7",
+    "face-api.js": "^0.22.2",
     "framer-motion": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
+    "react-webcam": "^7.2.0",
     "react-youtube": "^10.1.0",
     "socket.io-client": "^4.6.1",
     "styled-components": "^5.3.8",

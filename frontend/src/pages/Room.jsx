@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './livemeet.css'
 import {
   Button,
   RoomContainer,
@@ -139,7 +140,14 @@ const Room = () => {
               <RoomCreator>{`Made by ${roomDetails.createdBy}`}</RoomCreator>
               <RoomId>{`Room Id: ${roomDetails.roomId}`}</RoomId>
             </RoomNameWrapper>
-            <Button onClick={handleLeave}>Leave</Button>
+            <div>
+              <Button className="iUmzOt" onClick={() => window.location.href = '/video-conference'}>
+                Meet
+              </Button>
+
+
+              <Button onClick={handleLeave}>Leave</Button>
+            </div>
           </RoomHeader>
           {joinQueue && playlistData.length && (
             <div style={{ marginLeft: '150px', marginTop: '50px' }} className="youtube_container">

@@ -18,7 +18,7 @@ const getRoomsService = async (req, res) => {
         }
       })
     } else {
-      throw new Error('No rooms found')
+      throw new Error('No rooms found ye')
     }
   } catch (err) {
     console.log(err)

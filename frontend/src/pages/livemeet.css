@@ -1,0 +1,15 @@
+.iUmzOt {
+    color: rgb(255, 255, 255);               /* Text color is white */
+    background-color: rgba(30, 217, 135, 0.8); /* Background color is a semi-transparent green */
+    outline: none;                           /* Removes the default outline when the button is focused */
+    border: none;                            /* Removes the border */
+    padding: 6px;                           /* Adds padding of 12px on all sides of the button */
+    font-size: 16px;                         /* Font size is 16px */
+    border-radius: 8px;                      /* The button has rounded corners with a radius of 8px */
+    font-weight: 500;                        /* Font weight is set to 500 (medium weight) */
+    cursor: pointer;                        /* The cursor will change to a pointer when hovered */
+    transition: 0.3s;                        /* Applies a smooth transition for any changes (like hover effects) */
+    text-align: center;                      /* Centers the text inside the button */
+    position: relative;                      /* Sets the position of the button to relative, which is useful for positioning child elements */
+    margin-right: 20px;                      /* Adds a margin of 20px to the right of the button */
+}

@@ -155,7 +155,7 @@ const Queue = () => {
               onChange={(e) => {
                 setSearch(e.target.value)
               }}
-              placeholder="Search Song"
+              placeholder="Search"
             />
             <div onClick={searchSong}>
               <SearchIcon />
@@ -186,7 +186,7 @@ const Queue = () => {
       )}
       {!addSong && (
         <>
-          <QueueCta onClick={() => setAddSong(true)}>Add Song</QueueCta>
+          <QueueCta onClick={() => setAddSong(true)}>Add Content</QueueCta>
           <div
             style={{
               padding: '1em 16em',

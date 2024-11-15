@@ -11,6 +11,9 @@ const Home = () => {
         <Link to="/register" className={styles.btn}>
           Register
         </Link>
+        {/* <Link to="/face-dection" className={styles.btn}>
+        Face-Detected
+        </Link> */}
       </nav>
       <ul id={styles.shape}>
         <li className={styles.square}></li>
@@ -28,7 +31,9 @@ const Home = () => {
       </ul>
       <div className={styles.hero_text}>
         <div className={styles.hero_heading}>
-          FULLH<span className={styles.hero_heading_span}></span>USE
+          WORK
+          {/* <span className={styles.hero_heading_span}></span> */}
+          PLACE
         </div>
         <div className={styles.hero_subtext}>Let the party begin!</div>
         <Link to="/login" className={styles.hero_cta}>

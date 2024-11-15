@@ -49,4 +49,9 @@ router.patch('/removeTopSong', (req, res) => {
   removeTopSongValidation(req, res)
 })
 
+//.
+router.post('/face-verification', (req, res) => {
+  removeTopSongValidation(req, res)
+})
+
 module.exports = router
